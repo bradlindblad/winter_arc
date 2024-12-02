@@ -15,7 +15,6 @@ format:
     toc-title: Outline
     theme:
       light: cosmo
-      dark: darkly
     self-contained: true
     code-fold: true
     highlight-style: nord
