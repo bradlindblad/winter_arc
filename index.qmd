@@ -9,6 +9,8 @@ execute:
   echo: false
 format: 
   html:
+    include-in-header: 
+      - file: github-corner.html
     toc: false
     toc-title: Outline
     theme:
@@ -146,4 +148,4 @@ ggplot(for_plot, aes(x = Day, y = chill, group = 1)) +
   ylab("")
 ```
 
-Keep hammering
+**Keep hammering**
