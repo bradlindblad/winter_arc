@@ -1,0 +1,147 @@
+---
+title: "GoRuck Winter Arc"
+author: "Brad Lindblad"
+date: last-modified
+date-format: "MM-DD-YYYY"
+editor: visual
+execute: 
+  warning: false  
+  echo: false
+format: 
+  html:
+    toc: false
+    toc-title: Outline
+    theme:
+      light: cosmo
+      dark: darkly
+    self-contained: true
+    code-fold: true
+    highlight-style: nord
+---
+
+```{r}
+library(dplyr)
+library(ggplot2)
+library(jsonlite)
+library(purrr)
+library(stringi)
+
+get_weather <- function() {
+
+
+
+  URL <- 'https://api.weather.gov/gridpoints/FGF/96,54/forecast'
+  forecast <- jsonlite::fromJSON(URL, flatten = T)
+  forecast <- forecast$properties$periods
+
+}
+
+calc_chill <- function(temp, wind) {
+
+  x <- 35.74 + 0.6215 * temp - 35.75 * wind^0.16 + 0.4275 * temp * wind^0.16
+
+  return(round(x, 0))
+
+}
+
+clean_weather <- function(weather) {
+  weather |>
+    dplyr::rowwise() |>
+    dplyr::mutate(chill =
+                    
+                    calc_chill(
+                      temp = temperature,
+                      wind = as.numeric(
+                        stringi::stri_extract_first_words(windSpeed)
+                        )
+                      )
+                  )
+     
+
+    
+}
+
+# calc_chill(temp = 26, wind = 12)
+
+rate <- purrr::rate_delay(2, max_times = 15)
+possibly_insistently_get_weather <- purrr::insistently(get_weather, rate = rate) |>
+  purrr::possibly(otherwise=NULL)
+
+forecast <- possibly_insistently_get_weather()
+
+w <- clean_weather(forecast) 
+```
+
+```{r}
+chill <- w |> 
+  dplyr::filter(name == 'Thursday Night') |> 
+  dplyr::pull(chill)
+
+go_nogo <- function(chill) {
+  if(chill > 0) {
+    return("Go")
+  } else {
+    return("No Go")
+  }
+}
+
+decide <- function(chill) {
+  
+  if(chill <= - 5) {
+    return("you'll die out there - stay home")
+  } else if (chill <= 0 && chill > -5) {
+    return("too damn cold - stay home")
+  } else if (chill > 0 && chill < 32) {
+    return("it's not that bad - man-up and do it")
+  } else if (chill >= 32) {
+    return("beautiful out there")
+  }
+  
+}
+
+decision <- go_nogo(chill)
+reason <- decide(chill)
+```
+
+### Wind chill: `{r} paste0(chill, "\u00B0F")`
+
+### Disposition: `{r} decision`
+
+### Comment: `{r} paste0(reason)`
+
+```{r}
+for_plot <- w |> 
+  # Get only nights
+  dplyr::filter(isDaytime == FALSE) |> 
+  
+  # Subset cols
+  dplyr::select(Day = name, temperature, windSpeed) |> 
+  
+  # Get wind
+  dplyr::mutate(windSpeed = as.numeric(stringi::stri_extract_first_words(windSpeed))) |> 
+  
+  # Calc chill
+  dplyr::rowwise() |> 
+  dplyr::mutate(chill = calc_chill(temp = temperature, wind = windSpeed)) 
+
+for_plot$Day <- factor(for_plot$Day, levels = unique(for_plot$Day))
+
+
+
+ggplot(for_plot, aes(x = Day, y = chill, group = 1)) +
+   geom_rect(
+  xmin = -Inf, xmax = Inf, ymin = -Inf, ymax = 0,
+  fill = "red",alpha = 0.1
+) +
+  geom_line(fill = "black") +
+   geom_point(size = 2) +
+  geom_text(aes(label = chill), vjust = -0.5) +
+  
+  theme_minimal() +
+   theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1),
+        # Remove y-axis labels and ticks
+        axis.text.y = element_blank(),
+        axis.ticks.y = element_blank()) +
+  ggplot2::xlab("") +
+  ylab("")
+```
