@@ -1,8 +1,8 @@
 {
-  "hash": "84480bfe3a3c2fb8be4341dcfd2b017d",
+  "hash": "8d683bb3e26169c5fe0b7b09e8fda975",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: \"Sandbag Workouts\"\nauthor: \"Brad Lindblad\"\ndate: last-modified\ndate-format: \"MM-DD-YYYY\"\neditor: visual\nexecute: \n  warning: false  \n  echo: false\nformat: \n  html:\n    include-in-header: \n      - file: github-corner.html\n    toc: false\n    toc-title: Outline\n    theme:\n      light: cosmo\n    self-contained: true\n    code-fold: true\n    highlight-style: nord\n---\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n\n:::\n\n\n\n### Wind chill: \\-8°F\n\n### Disposition: No Go\n\n### Comment: you'll die out there \\- stay home\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-3-1.png){width=672}\n:::\n:::\n\n\n\n**Keep hammering**\n",
+    "markdown": "---\ntitle: \"Sandbag Workouts\"\nauthor: \"Brad Lindblad\"\ndate: last-modified\ndate-format: \"MM-DD-YYYY\"\neditor: visual\nexecute: \n  warning: false  \n  echo: false\nformat: \n  html:\n    include-in-header: \n      - file: github-corner.html\n    toc: false\n    toc-title: Outline\n    theme:\n      light: cosmo\n    self-contained: true\n    code-fold: true\n    highlight-style: nord\n---\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n\n:::\n\n\n\n### Wind chill: \\-8°F\n\n### Disposition: No Go\n\n### Comment: you'll die out there \\- stay home\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-3-1.png){width=672}\n:::\n:::\n\n\n\n*Keep hammering*\n",
     "supporting": [
       "index_files"
     ],
