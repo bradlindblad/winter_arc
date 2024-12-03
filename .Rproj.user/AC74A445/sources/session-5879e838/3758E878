@@ -3,7 +3,7 @@
     "path": "C:/repo/R/winter_arc/index.qmd",
     "project_path": "index.qmd",
     "type": "quarto_markdown",
-    "hash": "1904755609",
+    "hash": "4009792302",
     "contents": "",
     "dirty": false,
     "created": 1733170794779.0,
@@ -17,15 +17,15 @@
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
         "rmdVisualModeLocation": "3067:363.6363525390625",
-        "cursorPosition": "16,18",
-        "scrollLine": "6"
+        "cursorPosition": "1,24",
+        "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1733173401,
+    "lastKnownWriteTime": 1733234465,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1733173401974,
+    "last_content_update": 1733234465467,
     "read_only": false,
     "read_only_alternatives": []
 }

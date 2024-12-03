@@ -2,6 +2,9 @@ on:
   push:
     branches:
       - main
+  schedule:
+      - cron: '0 0 * * *' # 6 PM CST in UTC time (Midnight UTC during Standard Time, 11 PM UTC during Daylight Saving Time)
+
 
 name: Render and Publish
 
