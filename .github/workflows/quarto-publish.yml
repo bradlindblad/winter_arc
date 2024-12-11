@@ -3,7 +3,7 @@ on:
     branches:
       - main
   schedule:
-      - cron: '0 0 * * *' # 6 PM CST in UTC time (Midnight UTC during Standard Time, 11 PM UTC during Daylight Saving Time)
+      - cron: '0 0 * * 0-4,6' # Runs every day except Friday at midnight UTC (6 PM CST)
 
 
 name: Render and Publish

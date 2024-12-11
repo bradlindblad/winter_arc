@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Sandbag Workouts",
+    "title": "Standing Friday Sandbag Workout Status",
     "section": "",
-    "text": "Wind chill: -8°F\n\n\nDisposition: No Go\n\n\nComment: you’ll die out there - stay home\n\n\n\n\n\n\n\n\n\nKeep hammering"
+    "text": "Chill\n-17\n\n\nTemp\n-1\n\n\nWind\n10 mph\n\n\nDirection\nSE\n\n\nSummary\nMostly Sunny\n\n\nTime\n2024-12-13 06:00:00\n\n\nDecision\nNo Go\n\n\nReason\nyou'll die out there - stay home"
   },
   {
     "objectID": "about.html",
@@ -12,5 +12,54 @@
     "title": "About",
     "section": "",
     "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "tufte/index.html",
+    "href": "tufte/index.html",
+    "title": "A Tufte Inspired Manuscript",
+    "section": "",
+    "text": "Edward R. Tufte, godfather of charts, slayer of slide decks. Art by Fred Guth and MidJourney.\n\n\nProfessor Emeritus of Political Science, Statistics and Computer Sciente at Yale University, Edward Tufte is an expert in the presentation of informational.\nTufte’s style is known for extensive use of sidenotes, integration of graphics with text and typography1.\n\n\n\n\nMinard’s map of Napoleon’s Russian campaign, described by Edward Tufte as “may well be the best statistical graphic ever drawn” Tufte (2001, dy.–11cm)."
+  },
+  {
+    "objectID": "tufte/index.html#arbitrary-margin-content",
+    "href": "tufte/index.html#arbitrary-margin-content",
+    "title": "A Tufte Inspired Manuscript",
+    "section": "Arbitrary Margin Content",
+    "text": "Arbitrary Margin Content\nYou can include anything in the margin by places the class .column-margin on the element. See an example on the right about the first fundamental theorem of calculus.\n\n\nWe know from the first fundamental theorem of calculus that for \\(x\\) in \\([a, b]\\):\n\\[\\frac{d}{dx}\\left( \\int_{a}^{x} f(u)\\,du\\right)=f(x).\\]"
+  },
+  {
+    "objectID": "tufte/index.html#arbitrary-full-width-content",
+    "href": "tufte/index.html#arbitrary-full-width-content",
+    "title": "A Tufte Inspired Manuscript",
+    "section": "Arbitrary Full Width Content",
+    "text": "Arbitrary Full Width Content\nAny content can span to the full width of the page, simply place the element in a div and add the class column-page-right. For example, the following code will display its contents as full width.\n::: {.fullwidth}\nAny _full width_ content here.\n:::"
+  },
+  {
+    "objectID": "tufte/index.html#footnotes",
+    "href": "tufte/index.html#footnotes",
+    "title": "A Tufte Inspired Manuscript",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nTufte’s website: https://www.edwardtufte.com/tufte/↩︎"
+  },
+  {
+    "objectID": "winter_arc.html#introduction",
+    "href": "winter_arc.html#introduction",
+    "title": "Standing Friday Sandbag Workout Status",
+    "section": "Introduction",
+    "text": "Introduction\nQuarto is probably my favorite tool in the R/Python universe. Transforming your code and thoughts into a stunning report in one click always blows my mind.\nWhile the default Quarto appearance looks great, there are a few tweaks I always apply to elevate the report even further. Rather than manually adding them each time, I bundled everything into a custom format called lumo.\n\n\nBtw, you can learn how to master Quarto thanks to my online course: Productive R Workflow\nThis document aims at showcasing how a quarto document made with the lumo format looks like."
+  },
+  {
+    "objectID": "winter_arc.html#documentation",
+    "href": "winter_arc.html#documentation",
+    "title": "Standing Friday Sandbag Workout Status",
+    "section": "Documentation",
+    "text": "Documentation\nThe documentation for this quarto custom format is available here"
+  },
+  {
+    "objectID": "winter_arc.html",
+    "href": "winter_arc.html",
+    "title": "Standing Friday Sandbag Workout Status",
+    "section": "",
+    "text": "Chill\n-17\n\n\nTemp\n-1\n\n\nWind\n10 mph\n\n\nDirection\nSE\n\n\nSummary\nMostly Sunny\n\n\nTime\n2024-12-13 06:00:00\n\n\nDecision\nNo Go\n\n\nReason\nyou'll die out there - stay home"
   }
 ]

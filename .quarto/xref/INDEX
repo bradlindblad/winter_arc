@@ -4,5 +4,11 @@
   },
   "about.qmd": {
     "about.html": "2dec3546"
+  },
+  "tufte/index.qmd": {
+    "index.html": "f47b8c1e"
+  },
+  "winter_arc.qmd": {
+    "winter_arc.html": "3c36d823"
   }
 }
