@@ -54,11 +54,22 @@ gt <- fri |>
 
 library(echarts4r)
 
+mark_line <- fri |> 
+  dplyr::pull(time) 
+
 echart <- full |> 
   dplyr::select(time, chill) |> 
   echarts4r::e_chart(time) |> 
-  echarts4r::e_line(chill) |> 
-  echarts4r::e_tooltip(trigger = "axis")
+  echarts4r::e_line(chill, symbol = 'none') |> 
+  echarts4r::e_tooltip(trigger = "axis") |> 
+
+  # echarts4r::e_mark_line(serie = 'time', data = list(xAxis = as.POSIXct('2024-12-11 13:00:00', format = "%Y-%m-%d %H:%M:%S")), title = "")
+  echarts4r::e_mark_line( data = list(xAxis = mark_line), title = "") |> 
+  echarts4r::e_title("Wind Chill by Hour") |> 
+  echarts4r::e_legend(show = FALSE) |> 
+  echarts4r::e_animation(show = TRUE, duration = 2000)
+
+
 
 ```
 
