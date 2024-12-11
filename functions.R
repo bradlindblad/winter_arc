@@ -3,7 +3,6 @@
 library(dplyr)
 library(ggplot2)
 library(gt)
-library(gtExtras)
 library(jsonlite)
 library(purrr)
 library(stringi)
