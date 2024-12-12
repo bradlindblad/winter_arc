@@ -131,11 +131,6 @@ hr {
 }
 
 /* ------------------------------------------- DT table: smaller font ----------------- */
-table.dataTable tbody th,
-table.dataTable tbody td {
-  padding: 6px 10px;
-  font-size: 12px;
-}
 
 /* ------------------------------------------- Callout ----------------- */
 div.callout.callout {

@@ -1,6 +1,6 @@
 ---
-title: "Standing Friday Sandbag Workout Status"
-subtitle: "Are we doing this thing?"
+title: "Friday Morning Sandbag Status"
+# subtitle: "Are we doing this thing?"
 format:
   lumo-html: 
     code-fold: false
@@ -9,8 +9,8 @@ format:
     primary-color: "#69b3a2"
     self-contained: true
     is-particlejs-enabled: true                          # Optional: display interactive particles in the document header
-    bg-image: ""                                         # Optional: link to an image for the header background
-author: Team Rampage
+    bg-image: ""                                       # Optional: link to an image for the header background
+# author: Team Rampage
 date: last-modified
 ---
 
@@ -65,7 +65,7 @@ echart <- full |>
 
   # echarts4r::e_mark_line(serie = 'time', data = list(xAxis = as.POSIXct('2024-12-11 13:00:00', format = "%Y-%m-%d %H:%M:%S")), title = "")
   echarts4r::e_mark_line( data = list(xAxis = mark_line), title = "") |> 
-  echarts4r::e_title("Wind Chill by Hour") |> 
+  # echarts4r::e_title("Wind Chill by Hour") |> 
   echarts4r::e_legend(show = FALSE) |> 
   echarts4r::e_animation(show = TRUE, duration = 2000)
 
@@ -73,16 +73,41 @@ echart <- full |>
 
 ```
 
+```{r}
+#| echo: false
+# gt
+```
 
 ```{r}
 #| echo: false
+# echart
+```
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| fig-subcap: "Fig. 1 Weather Summary"
+
 gt
+
 ```
 
 ```{r}
 #| echo: false
+#| fig-align: center
+#| fig-subcap: "Fig. 2 Wind Chill By Hour"
+
 echart
+
 ```
 
+```{r}
+#| echo: false
+#| layout: [[40,-20,40]]
+
+# gt
+# 
+# echart
 
 
+```

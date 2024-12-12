@@ -122,6 +122,7 @@ make_gt <- function(df) {
 
   df |>
     gt() |>
+    # gt::tab_header("Weather Summary") |>
     cols_label(
       Category = "",  # Remove column header for Category
       Value = ""      # Remove column header for Value
