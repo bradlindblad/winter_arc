@@ -145,7 +145,8 @@ make_gt <- function(df) {
     tab_style(
       style = cell_fill(color = "white"),  # Set all rows to have a white background
       locations = cells_body(rows = everything())
-    )
+    ) |>
+    opt_horizontal_padding(scale = 2)
     #    # gt::tab_style(
     #   style = cell_fill(color = "#b2d8ff", alpha = 0.7),
     #   locations = cells_body(

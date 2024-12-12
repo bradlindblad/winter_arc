@@ -1,5 +1,5 @@
 ---
-title: "Friday Morning Sandbag Status"
+title: "Friday Sandbag Workout Status"
 
 # subtitle: "Are we doing this thing?"
 format:
@@ -46,13 +46,13 @@ badge_url <- paste0("https://img.shields.io/badge/Status-", decision, "-", badge
 
 ```{=html}
 <div style="text-align: center;">
-  <img src="`r badge_url`" style="transform: scale(1); display: inline-block;">
+  <img src="`r badge_url`" style="transform: scale(1.5); display: inline-block;">
 </div>
 ```
 
 ```{r}
 #| echo: false
-decision_df <- dplyr::tibble(Category = c("Decision", "Reason"), Value = c(decision, reason))
+decision_df <- dplyr::tibble(Category = c("Status", "Reason"), Value = c(decision, reason))
 
 
 gt <- fri |> 
@@ -102,16 +102,15 @@ echart <- full |>
 
 ```{r}
 #| echo: false
-#| fig-align: center
 #| fig-subcap: "Fig. 1 Weather Summary"
 
-gt
+gt #|> 
+  # gt::tab_header(title = md(glue::glue("<img src='{ badge_url }' style='height:30px;'>")))
 
 ```
 
 ```{r}
 #| echo: false
-#| fig-align: center
 #| fig-subcap: "Fig. 2 Wind Chill By Hour"
 
 echart
