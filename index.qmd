@@ -6,7 +6,7 @@ format:
     code-fold: false
     logo: "logo.png"                                     # Optional. Path to a logo displayed above the title
     github-repo: "https://github.com/bradlindblad/winter_arc"        # Optional. Adds a github corner at the top right
-    primary-color: "#69b3a2"
+    primary-color: "#894627"
     self-contained: true
     is-particlejs-enabled: true                          # Optional: display interactive particles in the document header
     bg-image: ""                                       # Optional: link to an image for the header background
