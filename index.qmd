@@ -46,7 +46,7 @@ badge_url <- paste0("https://img.shields.io/badge/Status-", decision, "-", badge
 
 ```{=html}
 <div style="text-align: center;">
-  <img src="`r badge_url`" style="transform: scale(1.5); display: inline-block;">
+  <img src="`r badge_url`" style="transform: scale(2); display: inline-block;">
 </div>
 ```
 
