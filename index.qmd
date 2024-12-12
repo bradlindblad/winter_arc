@@ -1,5 +1,6 @@
 ---
 title: "Friday Morning Sandbag Status"
+
 # subtitle: "Are we doing this thing?"
 format:
   lumo-html: 
@@ -32,6 +33,21 @@ chill <- fri |>
 
 decision <- go_nogo(chill)
 reason <- decide(chill)
+```
+
+```{r}
+#| echo: false
+# Define badge color based on status
+badge_color <- ifelse(decision == "Go", "green", "red")
+
+# Generate the badge URL
+badge_url <- paste0("https://img.shields.io/badge/Status-", decision, "-", badge_color, "?style=plastic")
+```
+
+```{=html}
+<div style="text-align: center;">
+  <img src="`r badge_url`" style="transform: scale(1); display: inline-block;">
+</div>
 ```
 
 ```{r}

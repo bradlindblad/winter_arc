@@ -105,9 +105,9 @@ go_nogo <- function(chill) {
 
 decide <- function(chill) {
 
-  if(chill <= - 5) {
+  if(chill <= - 10) {
     return("you'll die out there - stay home")
-  } else if (chill <= 0 && chill > -5) {
+  } else if (chill <= 0 && chill > -10) {
     return("too damn cold - stay home")
   } else if (chill > 0 && chill < 32) {
     return("it's not that bad - man-up and do it")
