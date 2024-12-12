@@ -64,23 +64,24 @@ echart <- full |>
   echarts4r::e_tooltip(trigger = "axis") |> 
 
   # echarts4r::e_mark_line(serie = 'time', data = list(xAxis = as.POSIXct('2024-12-11 13:00:00', format = "%Y-%m-%d %H:%M:%S")), title = "")
-  echarts4r::e_mark_line( data = list(xAxis = mark_line), title = "") |> 
+  echarts4r::e_mark_line(
+    data = list(xAxis = mark_line, label = list(formatter = as.character(chill))),
+    symbol = 'circle'
+    # title = "",
+    # symbol = 'circle'
+    # label = list(formatter = '-17')
+    ) |> 
   # echarts4r::e_title("Wind Chill by Hour") |> 
   echarts4r::e_legend(show = FALSE) |> 
-  echarts4r::e_animation(show = TRUE, duration = 2000)
+  echarts4r::e_animation(show = TRUE, duration = 6000)
 
-
+#echart
 
 ```
 
 ```{r}
 #| echo: false
 # gt
-```
-
-```{r}
-#| echo: false
-# echart
 ```
 
 ```{r}
@@ -98,16 +99,5 @@ gt
 #| fig-subcap: "Fig. 2 Wind Chill By Hour"
 
 echart
-
-```
-
-```{r}
-#| echo: false
-#| layout: [[40,-20,40]]
-
-# gt
-# 
-# echart
-
 
 ```
