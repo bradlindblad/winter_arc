@@ -13,6 +13,7 @@ format:
     bg-image: ""                                       # Optional: link to an image for the header background
 # author: Team Rampage
 date: last-modified
+date-format: "[Last updated on] MM-DD--YYYY"
 ---
 
 ```{r}
