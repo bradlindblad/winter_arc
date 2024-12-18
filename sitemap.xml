@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://bradlindblad.github.io/winter_arc/index.html</loc>
-    <lastmod>2024-12-17T00:24:44.685Z</lastmod>
-  </url>
-  <url>
     <loc>https://bradlindblad.github.io/winter_arc/winter_arc.html</loc>
-    <lastmod>2024-12-17T00:24:44.689Z</lastmod>
+    <lastmod>2024-12-18T00:23:45.830Z</lastmod>
   </url>
   <url>
     <loc>https://bradlindblad.github.io/winter_arc/about.html</loc>
-    <lastmod>2024-12-17T00:24:44.685Z</lastmod>
+    <lastmod>2024-12-18T00:23:45.827Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bradlindblad.github.io/winter_arc/index.html</loc>
+    <lastmod>2024-12-18T00:23:45.827Z</lastmod>
   </url>
 </urlset>
