@@ -3,7 +3,7 @@ on:
     branches:
       - main
   schedule:
-      - cron: '0 0 * * 0-4,6' # Runs every day except Friday at midnight UTC (6 PM CST)
+      - cron: '0 23 * * 0-4,6' # Runs every day except Friday at 11pm UTC (6 PM CST)
 
 
 name: Render and Publish
