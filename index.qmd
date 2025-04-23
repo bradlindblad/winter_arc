@@ -50,6 +50,7 @@ badge_url <- paste0("https://img.shields.io/badge/Status-", decision, "-", badge
   <img src="`r badge_url`" style="transform: scale(1.5); display: inline-block;">
 </div>
 ```
+
 ```{r}
 #| echo: false
 decision_df <- dplyr::tibble(Category = c("Status", "Reason"), Value = c(decision, reason))
